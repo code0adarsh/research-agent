@@ -30,31 +30,35 @@ This project implements a research agent that leverages LangChain and Google Gem
    cd research-agent
 
 2. **Create and Activate a Virtual Environment (optional but recommended):**
+    ```bash
     python -m venv venv
 ### On Windows:
     venv\Scripts\activate
 ### On macOS/Linux:
     source venv/bin/activate
 3. **Install Dependencies:**
+     ```bash
     pip install -r requirements.txt
 ### If you don’t have a requirements.txt, manually install the necessary packages:
     pip install python-dotenv pydantic google-generativeai langchain-google-genai langchain-communit
 4. **Configure Environment Variables:**
-    GOOGLE_API_KEY=your_google_api_key_here
+    ```bash
+   GOOGLE_API_KEY=your_google_api_key_here
 
 ## Usage
 1. **Run the Research Agent:**
-  python main.py
+    ```bash
+    python main.py
 
-2. **Enter Your Query:**
-# For example:
+3. **Enter Your Query:**
+    ### For example:
 
-    What can I help you research today? foods across the world, save to a file
+        What can I help you research today? foods across the world, save to a file
 
-3. **Review the Output:**
+4. **Review the Output:**
     The agent will generate a narrative research report and display the output in the console. If the query includes a save directive, the report is also saved to research_output.txt in your current directory.
 
-File Structure
+## File Structure
 **main.py:**
 The main application file. It sets up the agent, loads environment variables, and handles user interaction.
 
@@ -64,8 +68,8 @@ Contains definitions for all the tools used by the agent (e.g., web search, Wiki
 **.env:**
 Contains your environment variables (specifically, the GOOGLE_API_KEY).
 
-#Contributing
+# Contributing
 Contributions are welcome! Feel free to open issues or submit pull requests if you have ideas to enhance the functionality or improve the code.
 
-#License
+# License
 This project is licensed under the MIT License.
